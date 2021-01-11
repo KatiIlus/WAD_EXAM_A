@@ -38,7 +38,7 @@
 
         methods:{
           sort:function(s) {
-            //used https://www.raymondcamden.com/2018/02/08/building-table-sorting-and-pagination-in-vuejs as an example
+            //used code from https://www.raymondcamden.com/2018/02/08/building-table-sorting-and-pagination-in-vuejs as an example
             //if s == current sort, reverse
             if(s === this.currentSort) {
               this.currentSortDir = this.currentSortDir==='desc'?'asc':'desc';
@@ -49,7 +49,7 @@
 
         computed:{
           sortedTransactions:function() {
-            //used https://www.raymondcamden.com/2018/02/08/building-table-sorting-and-pagination-in-vuejs as an example
+            //used code from https://www.raymondcamden.com/2018/02/08/building-table-sorting-and-pagination-in-vuejs as an example
             return this.transactions.slice().sort((a,b) => {
               let modifier = 1;
               if(this.currentSortDir === 'desc') modifier = -1;
@@ -60,7 +60,7 @@
           },
 
           balance:function(){
-            //used https://www.iditect.com/how-to/50616608.html as an example
+            //used code from https://www.iditect.com/how-to/50616608.html as an example
             let balance = 0;
             for(let i = 0; i < this.transactions.length; i++){
               if(this.transactions[i].type === 'income'){
